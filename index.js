@@ -7,6 +7,7 @@ app.listen(3000, () => {
 
 app.use (express.json());
 const artists = require('./artists.json');
+const records = require('./records.json');
 
 
 //verbes HTTP
@@ -85,4 +86,71 @@ app.delete('/artists/:id', (req, res) => {
     artists.splice(index,1)
     res.status(200).json('Artiste suprimé')
     console.log("L'artiste a été suprimé");
+})
+
+
+//-------------------------------------------------------------------------------------------------
+//Record
+
+app.get('/records', (req, res) => {
+    res.status(200).json(records)
+})
+
+app.get('/records/:id', (req, res) => {
+    const id = Number(req.params.id)
+    const record = records.find(record => record.id === id)
+
+    if (!record) {
+        return res.status(404).send('record introuvable')
+    }
+    res.json(record)
+})
+
+app.post('/records/', (req, res) => {
+    const newRecord = {
+        id: records.length + 1,
+        name: req.body.name,
+        type: req.body.type,
+        description: req.body.description
+    }
+    if (!newRecord) {
+        return res.status(404).send('Id déjà utilisé')
+    }
+    res.json(newRecord)
+    records.push(newRecord)
+    res.status(201).json(newRecord)
+})
+
+app.put('/records/:id', (req, res) => {
+    const id = Number(req.params.id)
+    const index = records.findIndex(record => record.id === id)
+
+    if (index === -1) {
+        return res.status(404).send('record introuvable')
+    }
+    else {
+        
+    const updatedRecord = {
+        id: records[index].id,
+        name: req.body.name,
+        type: req.body.type,
+        description: req.body.description
+    }
+
+    records[index] = updatedRecord
+    res.status(200).json('record updated')
+    }
+
+
+})
+
+app.delete('/records/:id', (req, res) => {
+    const id = Number(req.params.id)
+    const index = records.findIndex(record => record.id === id)
+
+    if (!index) {
+        return res.status(404).send('record introuvable')
+    }
+    records.splice(index,1)
+    res.status(200).json('record suprimé')
 })

@@ -3,30 +3,135 @@
         "id": 1,
         "name": "SCH",
         "type": "Rap",
-        "description": "Loup noir"
+        "description": "Loup noir",
+        "_links": {
+            "record":
+            {
+                "href": "http://localhost:3000/records/2"
+            },
+            "_self": 
+                {
+                "href": "http://localhost:3000/artists/1"
+            },
+            "liste": 
+            {
+            "href": "http://localhost:3000/artists/"
+        }
+
+            },
+        "categories":    {
+                "id": 2,
+                "name": "Slow",
+                "description": "C'est lent"
+            }
+
     },
     {
         "id": 2,
         "name": "Tiakola",
         "type": "Rap",
-        "description": "R.I.P"
+        "description": "R.I.P",
+        "_links": {
+            "record":
+            {
+                "href": "http://localhost:3000/records/1"
+            },
+            "_self": 
+                {
+                "href": "http://localhost:3000/artists/2"
+            },
+            "liste": 
+            {
+            "href": "http://localhost:3000/artists/"
+        }
+
+            },
+        "categories":    {
+                "id": 2,
+                "name": "Slow",
+                "description": "C'est lent"
+            }
+
     },
     {
         "id": 3,
         "name": "Zamdane",
         "type": "Rap",
-        "description": "Fauves"
+        "description": "Fauves",
+        "_links": {
+            "record":
+            {
+                "href": "http://localhost:3000/records/2"
+            },
+            "_self": 
+                {
+                "href": "http://localhost:3000/artists/3"
+            },
+            "liste": 
+            {
+            "href": "http://localhost:3000/artists/"
+        }
+
+            },
+        "categories": {
+                "id": 1,
+                "name": "Drill",
+                "description": "Euh euh avec euh"
+            }
+
     },
     {
         "id": 44,
         "name": "Niska",
         "type": "Rap",
-        "description": "44"
+        "description": "44",
+        "_links": {
+            "record":
+            {
+                "href": "http://localhost:3000/records/1"
+            },
+            "_self": 
+                {
+                "href": "http://localhost:3000/artists/44"
+            },
+            "liste": 
+            {
+            "href": "http://localhost:3000/artists/"
+        }
+
+            },
+        "categories": {
+                "id": 1,
+                "name": "Drill",
+                "description": "Euh euh avec euh"
+            }
+
     },
     {
         "id": 5,
         "name": "Gazo",
         "type": "Rap",
-        "description": "Die"
+        "description": "Die",
+        "_links": {
+            "record":
+            {
+                "href": "http://localhost:3000/records/1"
+            },
+            "_self": 
+                {
+                "href": "http://localhost:3000/artists/5"
+            },
+            "liste": 
+            {
+            "href": "http://localhost:3000/artists/"
+        }
+
+            },
+            "categories": {
+                "id": 1,
+                "name": "Drill",
+                "description": "Euh euh avec euh"
+            }
+
     }
 ]
