@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "SCH",
+        "type": "Rap",
+        "description": "Loup noir"
+    },
+    {
+        "id": 2,
+        "name": "Tiakola",
+        "type": "Rap",
+        "description": "R.I.P"
+    },
+    {
+        "id": 3,
+        "name": "Zamdane",
+        "type": "Rap",
+        "description": "Fauves"
+    },
+    {
+        "id": 44,
+        "name": "Niska",
+        "type": "Rap",
+        "description": "44"
+    },
+    {
+        "id": 5,
+        "name": "Gazo",
+        "type": "Rap",
+        "description": "Die"
+    }
+]
